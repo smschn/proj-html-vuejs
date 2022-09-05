@@ -11,7 +11,7 @@
         </div>
         <div class="s1_right d_flex">
           <div class="square">
-            <i class="fa-solid fa-medal"></i>
+            <i class="fa-solid fa-award"></i>
             <h2>Tradition</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, necessitatibus.</p>
           </div>
@@ -21,7 +21,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, animi?</p>
           </div>
           <div class="square">
-            <i class="fa-regular fa-note-sticky"></i>
+            <i class="fa-regular fa-pen-to-square"></i>
             <h2>Certificate</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatibus!</p>
           </div>
@@ -33,7 +33,25 @@
         </div>
       </div>
     </section>
-    <section id="section2"></section>
+    <section id="section2">
+      <div class="container">
+        <h5>our business areas</h5>
+        <h1>Excellence in <span>Services</span></h1>
+        <div class="floated">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum vitae rerum magni? Provident magni nostrum dolore doloribus vel. Tempora provident veritatis dolore tenetur dicta ratione ea minima eveniet rem qui.</p>
+          <button class="btn btn_green">SEE ALL</button>
+        </div>
+
+        <div class="services_container d_flex">
+          <div>ciao</div>
+          <div>ciao</div>
+          <div>ciao</div>
+          <div>ciao</div>
+          <div>ciao</div>
+          <div>ciao</div>
+        </div>
+      </div>
+    </section>
     <section id="section3"></section>
     <section id="section4"></section>
     <section id="section5"></section>
@@ -53,12 +71,13 @@ export default {
 
 #section1 {
   background-color: $c8;
-  padding: 100px;
+  padding: 100px 0;
   color: #fff; //eliminare
 
   .container {
     justify-content: space-between;
     padding: 20px;
+    width: 100%;
 
     .s1_left {
       max-width: 50%;
@@ -107,7 +126,42 @@ export default {
 }
 
 #section2 {
-  background-color: $c4;
-  height: 100px;
+  background-color: $c9;
+  padding: 100px 0;
+  content: "";
+  display: table;
+  clear: both;
+
+  h5 {
+    color: $c5;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 15px 0;
+
+    span {
+      background-color: $c4;
+      color: $c2;
+      padding: 10px;
+    }
+  }
+
+  p {
+  color: grey;
+  float: left;
+  max-width: 70%;
+  }
+    
+  .btn {
+    float: right;
+  }
+
+  .floated:after { // clearfix rule
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 </style>
