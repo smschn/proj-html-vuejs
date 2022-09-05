@@ -1,5 +1,5 @@
 <template>
-  <section id="section4">
+    <section id="section4">
       <div class="container d_flex">
         <div class="s4_left">
           <div>
