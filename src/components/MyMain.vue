@@ -5,7 +5,8 @@
     <section id="section3">
       to do
     </section>
-    <section id="section4">
+    <MySection4 />
+    <!-- <section id="section4">
       <div class="container d_flex">
         <div class="s4_left">
           <div>
@@ -37,7 +38,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="section5"></section>
     <section id="section6"></section>
   </main>
@@ -46,38 +47,15 @@
 <script>
 import MySection1 from './MySection1.vue';
 import MySection2 from './MySection2.vue';
+import MySection4 from './MySection4.vue';
+
 
 export default {
     name: 'MyMain',
     components: {
       MySection1,
-      MySection2
-    },
-    data() {
-      return {
-        employees: [
-          {
-            imgSrc: require('../assets/img/team-1.jpg'),
-            name: 'David Cooper',
-            role: 'CTO & CO-FOUNDER'
-          },
-          {
-            imgSrc: require('../assets/img/team-3.jpg'),
-            name: 'Oliver Jones',
-            role: 'CHIEF PROCUREMENT'
-          },
-          {
-            imgSrc: require('../assets/img/team-2.jpg'),
-            name: 'Emma Lopez',
-            role: 'CHIEF MARKETING'
-          },
-          {
-            imgSrc: require('../assets/img/team-4.jpg'),
-            name: 'T.Johnson',
-            role: 'CEO & PRESIDENT'
-          },
-        ]
-      }
+      MySection2,
+      MySection4
     }
 }
 </script>
@@ -88,111 +66,5 @@ export default {
 
 #section3 {
   padding: 300px;
-}
-
-#section4 {
-  background-color: $c8;
-  padding: 100px 0;
-  color: #fff;
-
-  .container {
-    justify-content: space-between;
-  }
-
-  .s4_left {
-    flex-basis: calc(100% / 3 * 2 - 40px);
-    
-    h5 {
-      text-transform: uppercase;
-      color: $c5;
-    }
-    
-    h1 {
-      font-size: 3rem;
-      margin: 25px 0;
-      
-      span {
-        background-color: $c12;
-        border-radius: 5px;
-        padding: 10px;
-      }
-    }
-
-    p {
-      color: $c1;
-    }
-
-    .employee_container {
-      flex-wrap: wrap;
-    }
-
-    .employee_card {
-      margin-top: 30px;
-      flex-basis: calc(100% / 2 - 10px);
-
-      img {
-        width: 80px;
-        border-radius: 5px;
-      }
-
-      .employee_info {
-        padding: 4px 0 4px 20px;
-
-        h6 {
-          margin: 15px 0;
-          color: $c1;
-        }
-
-        i:before {
-          margin: 0 5px;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 20px;
-          vertical-align: middle;
-          padding: 5px;
-          background-color: $c12;
-          display: inline-block;
-          color: $c5;
-        }
-      }
-    }
-  }
-
-  .s4_right {
-    flex-basis: calc(100% / 3);
-
-    .s4r_top {
-      height: 10%;
-    }
-
-    .s4r_bottom {
-      background-color: $c2;
-      padding: 30px;
-      border-radius: 5px;
-
-      p {
-        margin: 20px 0;
-        color: $c4;
-      }
-
-      h4 {
-        font-size: 1.5rem;
-      }
-
-      h5 {
-        position: relative;
-
-        i {
-          position: absolute;
-          right: 0;
-          top: -20px;
-          font-size: 2rem;
-          color: $c12;
-        }
-      }
-    }
-  }
 }
 </style>
