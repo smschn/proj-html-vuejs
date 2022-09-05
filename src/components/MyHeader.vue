@@ -15,20 +15,39 @@
         </ul>
       </div>
     </div>
-    <div class="header_middle">
-      <div class="container navbar d_flex">
-        <div class="d_flex logo">
-          <span class="logo_left">NEX</span>
-          <span class="logo_right">GEN</span>
-        </div>
-        <ul class="d_flex">
-          <li v-for="(link, index) in navbarLinks" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
-          <button class="btn">GET IN TOUCH</button>
-        </ul>
-      </div>
-    </div>
     <div id="jumbotron">
-      jumbo
+      <div class="header_middle">
+        <div class="container navbar d_flex">
+          <div class="d_flex logo">
+            <span class="logo_left">NEX</span>
+            <span class="logo_right">GEN</span>
+          </div>
+          <ul class="d_flex">
+            <li v-for="(link, index) in navbarLinks" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
+            <button class="btn">GET IN TOUCH</button>
+          </ul>
+        </div>
+      </div>
+      <div id="consulting">
+        <h5>FUSIONS & AQUISITIONS</h5>
+        <h1>Insurance</h1>
+        <h1>Consulting</h1>
+        <div>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+        </div>
+        <div>
+          <input type="number" placeholder="Phone" />
+          <select name="info" id="info">
+            <option value="">More info</option>
+            <option value="Option1">Option1</option>
+            <option value="Option2">Option2</option>
+            <option value="Option3">Option3</option>
+          </select>
+        </div>
+        <button class="btn">GET IN TOUCH</button>
+        <button class="btn">READ MORE</button>
+      </div>
     </div>
   </header>
 </template>
@@ -94,47 +113,74 @@ header {
     }
   }
 
-  .header_middle {
-    padding: 10px;
-    
-    .navbar {
-      justify-content: space-between;
-      text-decoration: none;
+  #jumbotron {
+    background-image: url('../assets/img/bg-6.jpg');
+    position: relative;
+    height: 1000px;
 
-      .logo {
-        font-weight: bold;
+    .header_middle {
+      padding: 10px;
+    
+      .navbar {
+        justify-content: space-between;
+        text-decoration: none;
+
+        .logo {
+          font-weight: bold;
           letter-spacing: 5px;
 
+          .logo_left {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: $c4;
+            padding: 10px 1px 10px 20px;
+            color: $c5;
+            margin-right: 2px;
+          }
+        }
 
-        .logo_left {
-          border-top-left-radius: 20px;
-          border-bottom-left-radius: 20px;
-          background-color: $c4;
-          padding: 10px 1px 10px 20px;
-          color: $c5;
-          margin-right: 2px;
+        div,
+        ul {
+          align-items: center;
+        }
+      
+        li {
+          padding: 0 15px;
+          list-style: none;
+          text-transform: uppercase;
+
+          a {
+            text-decoration: none;
+            color: $c3;
+          }
+        }
+
+        .btn {
+          background-color: $c2;
+          color: #fff;
+          margin-left: 10px;
         }
       }
+    }
 
-      div,
-      ul {
-        align-items: center;
-      }
-    
-      li {
-        padding: 0 15px;
-        list-style: none;
-        text-transform: uppercase;
+    #consulting {
+      position: absolute;
+      right: 10%;
 
-        a {
-        text-decoration: none;
-        color: $c3;
-        }
+      h5 {
+        color: #00a5a5;
       }
 
-      .btn {
-        background-color: $c2;
-        color: #fff;
+      input,
+      select {
+        padding: 10px;
+        background-color: $c6;
+        border: 1px solid $c6;
+        border-radius: 4px;
+      }
+
+      select {
+        color: grey;
       }
     }
   }
