@@ -10,7 +10,7 @@
         </div>
         <div class="s1_right d_flex">
           <div class="square" v-for="(squareContent, index) in squaresContent" v-bind:key="index">
-            <i v-bind:class="squareContent.icon"></i>
+            <i v-bind:class="squareContent.iconClass"></i>
             <h2>{{squareContent.title}}</h2>
             <p>{{squareContent.text}}</p>
           </div>
@@ -26,22 +26,22 @@ export default {
         return {
             squaresContent: [
                 {
-                    icon: 'fa-solid fa-award',
+                    iconClass: 'fa-solid fa-award',
                     title: 'Tradition',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, necessitatibus.'
                 },
                 {
-                    icon: 'fa-solid fa-lock',
+                    iconClass: 'fa-solid fa-lock',
                     title: 'Security',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, animi?'
                 },
                 {
-                    icon: 'fa-regular fa-pen-to-square',
+                    iconClass: 'fa-regular fa-pen-to-square',
                     title: 'Certificate',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatibus!'
                 },
                 {
-                    icon: 'fa-solid fa-graduation-cap',
+                    iconClass: 'fa-solid fa-graduation-cap',
                     title: 'Expertise',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, alias?'
                 },
