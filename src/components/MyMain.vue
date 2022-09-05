@@ -41,14 +41,43 @@
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum vitae rerum magni? Provident magni nostrum dolore doloribus vel. Tempora provident veritatis dolore tenetur dicta ratione ea minima eveniet rem qui.</p>
           <button class="btn btn_green">SEE ALL</button>
         </div>
-
         <div class="services_container d_flex">
-          <div>ciao</div>
-          <div>ciao</div>
-          <div>ciao</div>
-          <div>ciao</div>
-          <div>ciao</div>
-          <div>ciao</div>
+          <div class="services_card">
+            <i class="fa-solid fa-network-wired f_icon"></i>
+            <h3>Audit & Assurance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, necessitatibus?</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="services_card">
+            <i class="fa-solid fa-network-wired f_icon"></i>
+            <h3>Audit & Assurance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, necessitatibus?</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="services_card">
+            <i class="fa-solid fa-network-wired f_icon"></i>
+            <h3>Audit & Assurance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, necessitatibus?</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="services_card">
+            <i class="fa-solid fa-network-wired f_icon"></i>
+            <h3>Audit & Assurance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, necessitatibus?</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="services_card">
+            <i class="fa-solid fa-network-wired f_icon"></i>
+            <h3>Audit & Assurance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, necessitatibus?</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="services_card">
+            <i class="fa-solid fa-network-wired f_icon"></i>
+            <h3>Audit & Assurance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, necessitatibus?</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
         </div>
       </div>
     </section>
@@ -72,7 +101,7 @@ export default {
 #section1 {
   background-color: $c8;
   padding: 100px 0;
-  color: #fff; //eliminare
+  color: #fff;
 
   .container {
     justify-content: space-between;
@@ -128,9 +157,6 @@ export default {
 #section2 {
   background-color: $c9;
   padding: 100px 0;
-  content: "";
-  display: table;
-  clear: both;
 
   h5 {
     color: $c5;
@@ -139,19 +165,20 @@ export default {
 
   h1 {
     font-size: 3rem;
-    margin: 15px 0;
+    margin: 25px 0;
 
     span {
       background-color: $c4;
       color: $c2;
+      border-radius: 5px;
       padding: 10px;
     }
   }
 
   p {
-  color: grey;
-  float: left;
-  max-width: 70%;
+    color: grey;
+    float: left;
+    max-width: 70%;
   }
     
   .btn {
@@ -162,6 +189,38 @@ export default {
     content: "";
     display: table;
     clear: both;
+    
+  }
+
+  .services_container {
+    margin: 45px 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .services_card {
+      flex-basis: calc(100% / 3 - 20px);
+      margin: 20px 0;
+      padding: 30px;
+      border-radius: 5px;
+      position: relative;
+      background-color: #fff;
+
+      .f_icon {
+        font-size: 2rem;
+        color: $c2;
+      }
+
+      h3 {
+        margin: 20px 0;
+      }
+
+      .fa-arrow-right {
+        position: absolute;
+        right: 10%;
+        top: 30px;
+        color: $c11;
+      }
+    }
   }
 }
 </style>
