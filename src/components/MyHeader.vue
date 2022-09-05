@@ -24,7 +24,7 @@
           </div>
           <ul class="d_flex">
             <li v-for="(link, index) in navbarLinks" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
-            <button class="btn">GET IN TOUCH</button>
+            <button class="btn btn_green">GET IN TOUCH</button>
           </ul>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <h5>FUSIONS & AQUISITIONS</h5>
         <h1>Insurance</h1>
         <h1>Consulting</h1>
-        <div>
+        <div class="input_first_row">
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email" />
         </div>
@@ -45,8 +45,8 @@
             <option value="Option3">Option3</option>
           </select>
         </div>
-        <button class="btn">GET IN TOUCH</button>
-        <button class="btn">READ MORE</button>
+        <button class="btn btn_green">GET IN TOUCH</button>
+        <button class="btn btn_white">READ MORE</button>
       </div>
     </div>
   </header>
@@ -115,11 +115,15 @@ header {
 
   #jumbotron {
     background-image: url('../assets/img/bg-6.jpg');
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-position-y: -100px;
+    background-position-x: 0;
     position: relative;
-    height: 1000px;
+    height: 800px;
 
     .header_middle {
-      padding: 10px;
+      padding: 20px 10px 10px 10px;
     
       .navbar {
         justify-content: space-between;
@@ -155,9 +159,7 @@ header {
           }
         }
 
-        .btn {
-          background-color: $c2;
-          color: #fff;
+        .btn_green {
           margin-left: 10px;
         }
       }
@@ -165,22 +167,41 @@ header {
 
     #consulting {
       position: absolute;
-      right: 10%;
+      right: 15%;
+      bottom: 30%;
 
       h5 {
-        color: #00a5a5;
+        color: $c5;
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
       }
 
       input,
       select {
+        margin-right: 10px;
+        margin-bottom: 10px;
         padding: 10px;
         background-color: $c6;
         border: 1px solid $c6;
         border-radius: 4px;
       }
 
+      .input_first_row {
+        margin-top: 20px;
+      }
+
       select {
         color: grey;
+        width: 47%;
+      }
+
+      .btn_white{
+        margin-left: 15px;
+        background-color: #e1e5e6;
+        color: $c2;
       }
     }
   }

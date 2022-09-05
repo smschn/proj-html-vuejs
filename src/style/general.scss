@@ -1,3 +1,5 @@
+@import '../style/vars.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 .container {
-    max-width: 90%;
+    max-width: 70%;
     margin: auto;
 }
 
@@ -15,6 +17,11 @@
 
 .btn {
     padding: 10px 20px;
-    border: 1px solid;
+    border: 1px solid $c2;
     border-radius: 6px;
 }
+
+.btn_green {
+    background-color: $c2;
+    color: #fff;
+  }
