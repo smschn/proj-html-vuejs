@@ -19,14 +19,23 @@
               <div class="employee_info">
                 <h4>{{employee.name}}</h4>
                 <h6>{{employee.role}}</h6>
-                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-facebook-f icon-background"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-linkedin-in"></i>
               </div>
             </div>
           </div>
         </div>
-        <div class="s4_right">dx</div>
+        <div class="s4_right">
+          <div class="s4r_top"></div>
+          <div class="s4r_bottom">
+            <h4>President Speech</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ullam eaque eum earum id sint.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores dolorem fugiat facilis tempora aliquam in praesentium, eveniet laboriosam optio.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci soluta aut praesentium sint, quam excepturi.</p>
+            <h5>T.Johnson <i class="fa-solid fa-quote-right"></i></h5>
+          </div>
+        </div>
       </div>
     </section>
     <section id="section5"></section>
@@ -86,8 +95,12 @@ export default {
   padding: 100px 0;
   color: #fff;
 
+  .container {
+    justify-content: space-between;
+  }
+
   .s4_left {
-    flex-basis: calc(100% / 3 * 2);
+    flex-basis: calc(100% / 3 * 2 - 40px);
     
     h5 {
       text-transform: uppercase;
@@ -115,7 +128,7 @@ export default {
 
     .employee_card {
       margin-top: 30px;
-      flex-basis: calc(100% / 2);
+      flex-basis: calc(100% / 2 - 10px);
 
       img {
         width: 80px;
@@ -123,15 +136,25 @@ export default {
       }
 
       .employee_info {
-        padding: 10px 0 0 20px;
+        padding: 4px 0 4px 20px;
 
         h6 {
           margin: 15px 0;
+          color: $c1;
         }
 
-        i {
-          margin: 0 10px;
-          background-color: red;
+        i:before {
+          margin: 0 5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 20px;
+          vertical-align: middle;
+          padding: 5px;
+          background-color: $c12;
+          display: inline-block;
+          color: $c5;
         }
       }
     }
@@ -139,6 +162,37 @@ export default {
 
   .s4_right {
     flex-basis: calc(100% / 3);
+
+    .s4r_top {
+      height: 10%;
+    }
+
+    .s4r_bottom {
+      background-color: $c2;
+      padding: 30px;
+      border-radius: 5px;
+
+      p {
+        margin: 20px 0;
+        color: $c4;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      h5 {
+        position: relative;
+
+        i {
+          position: absolute;
+          right: 0;
+          top: -20px;
+          font-size: 2rem;
+          color: $c12;
+        }
+      }
+    }
   }
 }
 </style>
