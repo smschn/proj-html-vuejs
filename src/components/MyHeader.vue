@@ -17,8 +17,9 @@
     </div>
     <div class="header_middle">
       <div class="container navbar d_flex">
-        <div class="d_flex">
-          NEXGEN
+        <div class="d_flex logo">
+          <span class="logo_left">NEX</span>
+          <span class="logo_right">GEN</span>
         </div>
         <ul class="d_flex">
           <li v-for="(link, index) in navbarLinks" v-bind:key="index"><a v-bind:href="link.url">{{link.text}}</a></li>
@@ -99,6 +100,21 @@ header {
     .navbar {
       justify-content: space-between;
       text-decoration: none;
+
+      .logo {
+        font-weight: bold;
+          letter-spacing: 5px;
+
+
+        .logo_left {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          background-color: $c4;
+          padding: 10px 1px 10px 20px;
+          color: $c5;
+          margin-right: 2px;
+        }
+      }
 
       div,
       ul {
