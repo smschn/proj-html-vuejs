@@ -13,22 +13,26 @@
                         <li><i class="fa-solid fa-envelope"></i> hello@example.com</li>
                         <li><i class="fa-sharp fa-solid fa-location-dot"></i> Main Avenue, 987</li>
                     </ul>
-                    <button>get in touch</button>
+                    <button class="btn">get in touch</button>
                 </div>
                 <div class="card_footer">
-                    <h2>about</h2>
+                    <h2>About</h2>
                     <ul>
-                        <li>> item</li>
-                        <li>> item</li>
-                        <li>> item</li>
-                        <li>> item</li>
-                        <li>> item</li>
-
+                        <li v-for="(link, index) in footerLinksAbout" v-bind:key="index"><a v-bind:href="link.url"><i class="fa-solid fa-angle-right"></i> {{link.text}}</a></li>
                     </ul>
                 </div>
-                <div class="card_footer">services</div>
-                <div class="card_footer">support</div>
-
+                <div class="card_footer">
+                    <h2>Services</h2>
+                    <ul>
+                        <li v-for="(link, index) in footerLinksServices" v-bind:key="index"><a v-bind:href="link.url"><i class="fa-solid fa-angle-right"></i> {{link.text}}</a></li>
+                    </ul>
+                </div>
+                <div class="card_footer">
+                    <h2>Support</h2>
+                    <ul>
+                        <li v-for="(link, index) in footerLinksSupport" v-bind:key="index"><a v-bind:href="link.url"><i class="fa-solid fa-angle-right"></i> {{link.text}}</a></li>
+                    </ul>
+                </div>                
             </div>
         </section>
         <section id="f2"></section>
@@ -37,7 +41,89 @@
 
 <script>
 export default {
-    name: 'MyFooter'
+    name: 'MyFooter',
+    data() {
+        return {
+            footerLinksAbout: [
+                {
+                    text: 'The Company',
+                    url: '#'
+                },
+                {
+                    text: 'Insitutional',
+                    url: '#'
+                },
+                {
+                    text: 'Social & Events',
+                    url: '#'
+                },
+                {
+                    text: 'Innovation',
+                    url: '#'
+                },
+                {
+                    text: 'Environment',
+                    url: '#'
+                },
+                {
+                    text: 'Technology',
+                    url: '#'
+                }
+            ],
+            footerLinksServices: [
+                {
+                    text: 'Audit & Assurance',
+                    url: '#'
+                },
+                {
+                    text: 'Financial Advisory',
+                    url: '#'
+                },
+                {
+                    text: 'Analytics M&A',
+                    url: '#'
+                },
+                {
+                    text: 'Middle Marketing',
+                    url: '#'
+                },
+                {
+                    text: 'Legal Counseling',
+                    url: '#'
+                },
+                {
+                    text: 'Regulatory Risk',
+                    url: '#'
+                }
+            ],
+            footerLinksSupport: [
+                {
+                    text: 'Responsibility',
+                    url: '#'
+                },
+                {
+                    text: 'Terms of Use',
+                    url: '#'
+                },
+                {
+                    text: 'About Cookies',
+                    url: '#'
+                },
+                {
+                    text: 'Privacy policy',
+                    url: '#'
+                },
+                {
+                    text: 'Accessibility',
+                    url: '#'
+                },
+                {
+                    text: 'Information',
+                    url: '#'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -52,13 +138,24 @@ export default {
 
     li {
         list-style: none;
+        margin: 12px 0;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        color: $c1;
     }
 
     .container.f1 {
         justify-content: space-between;
 
         .card_footer {
-            flex-basis: calc(100% / 4 - 10px);
+            flex-basis: calc(100% / 4 - 20px);
+            border-radius: 5px;
 
             .logo {
                 font-weight: bold;
@@ -74,22 +171,33 @@ export default {
                 }
 
                 .logo_right {
-                    line-height: 38px;
+                    line-height: 44px;
                 }
             }
         }
 
         .card_footer:first-child {
 
+            div {
+                font-size: 1.3rem;
+            }
+
             ul li {
                 margin: 15px 0;
+            }
+
+            button {
+                background-color: $c13;
+                color: #fff;
+                text-transform: uppercase;
             }
         }
 
         .card_footer:nth-child(2),
         .card_footer:nth-child(3),
         .card_footer:nth-child(4) {
-            background-color: red;
+            background-color: $c14;
+            padding: 20px;
         }
 
     }
