@@ -95,6 +95,7 @@ export default {
       text-align: center;
       border-top: 4px solid $c4;
       position: relative;
+      padding: 30px;
 
       .circle {
         width: 40px;

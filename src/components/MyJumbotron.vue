@@ -80,7 +80,7 @@ export default {
     background-repeat: no-repeat;
     background-image: cover;
     background-position-y: -100px;
-    background-position-x: 0;
+    background-position-x: -110px;
     position: relative;
     height: 800px;
 

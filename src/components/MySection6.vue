@@ -68,6 +68,7 @@ export default {
       input,
       button {
         display: block;
+        margin: 16px 0;
       }
 
       input {
