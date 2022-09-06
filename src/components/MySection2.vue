@@ -100,7 +100,6 @@ export default {
     content: "";
     display: table;
     clear: both;
-    
   }
 
   .services_container {
