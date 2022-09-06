@@ -9,30 +9,10 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, reprehenderit quasi. Facilis, suscipit dolor voluptatum minima ea fugit exercitationem nam!</p>
       </div>
       <div class="s3_second">
-        <div class="circle_card_container">
-          <div class="circle">1</div>
-          <h3>titolo</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="circle_card_container">
-          <div class="circle"></div>
-          <h3>titolo</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="circle_card_container">
-          <div class="circle"></div>
-          <h3>titolo</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="circle_card_container">
-          <div class="circle"></div>
-          <h3>titolo</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="circle_card_container">
-          <div class="circle"></div>
-          <h3>titolo</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+        <div class="circle_card_container" v-for="(process, index) in processesData" v-bind:key="index">
+          <div class="circle">{{process.number}}</div>
+          <h3>{{process.title}}</h3>
+          <p>{{process.text}}</p>
         </div>
       </div>
     </section>
@@ -54,6 +34,37 @@ export default {
       MySection1,
       MySection2,
       MySection4
+    },
+    data() {
+      return {
+        processesData: [
+          {
+            number: '01',
+            title: 'Collection of information',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+          },
+          {
+            number: '02',
+            title: 'Strategic planning',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+          },
+          {
+            number: '03',
+            title: 'Assignment of responsibilities',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+          },
+          {
+            number: '04',
+            title: 'Formatting process',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+          },
+          {
+            number: '05',
+            title: 'Continuity formalization',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing.'
+          },
+        ]
+      }
     }
 }
 </script>
@@ -99,24 +110,30 @@ export default {
     .circle_card_container {
       flex-basis: calc(100% / 5);
       text-align: center;
-      border-top: 4px solid lightgreen;
+      border-top: 4px solid $c4;
       position: relative;
 
       .circle {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: lightcoral;
+        background-color: $c4;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         top: -22px;
         text-align: center;
         line-height: 40px;
+        color: $c2;
+        font-weight: bold;
       }
 
       h3 {
-        margin-top: 30px;
+        margin: 30px 0;
+      }
+
+      p {
+        color: grey;
       }
     }
 
