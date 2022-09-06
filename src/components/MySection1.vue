@@ -3,7 +3,7 @@
       <div class="container d_flex">
         <div class="s1_left">
           <h5>ABOUT THE NETWORK</h5>
-          <h1>The Company</h1>
+          <h1><span>The</span> Company</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deleniti repellat, ex repellendus inventore dolore quia necessitatibus veritatis sequi placeat eum rerum corporis voluptate officia!</p>
           <br>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quis.</p>
@@ -74,8 +74,14 @@ export default {
       }
 
       h1 {
-        margin: 20px;
+        margin: 25px 0;
         font-size: 3rem;
+
+        span {
+          background-color: $c12;
+          border-radius: 5px;
+          padding: 10px;
+        }
       }
 
       p {
