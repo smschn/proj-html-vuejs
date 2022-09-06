@@ -5,7 +5,20 @@
     <MySection3 />
     <MySection4 />
     <MySection5 />
-    <section id="section6"></section>
+    <section id="section6">
+      <div class="container">
+        <div class="s6_left">
+          <h5>newsletter</h5>
+          <h1><span>Know</span> First</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequuntur delectus, iure veniam explicabo quae?</p>
+        </div>
+        <div class="s6_right">
+          <input type="text" placeholder="Name" />
+          <input type="email" palceholder="Email" />
+          <button>subscribe</button>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -32,5 +45,13 @@ export default {
 @import '../style/vars.scss';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
-
+#section6 {
+  background-image: url('../assets/img/bg-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 440px;
+  color: #fff;
+  padding: 100px 0;
+}
 </style>

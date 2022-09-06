@@ -69,6 +69,7 @@ export default {
   }
 
   .floated {
+    line-height: 37px;
 
     p {
       float: left;
