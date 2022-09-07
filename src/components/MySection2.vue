@@ -8,20 +8,20 @@
           <button class="btn btn_green">SEE ALL</button>
         </div>
         <div class="services_container d_flex">
-          <div class="services_card" v-for="(servicesCard, index) in servicesCardsContent" v-bind:key="index">
-            <i v-bind:class="servicesCard.iconClass"></i>
-            <h3>{{servicesCard.title}}</h3>
-            <p>{{servicesCard.text}}</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
+          <MySection2Card v-for="(servicesCard, index) in servicesCardsContent" v-bind:key="index" :servicesCardProps="servicesCard" />
         </div>
       </div>
     </section>
 </template>
 
 <script>
+import MySection2Card from './MySection2Card.vue';
+
 export default {
     name: 'MySection2',
+    components: {
+      MySection2Card
+    },
     data() {
         return {
             servicesCardsContent: [
@@ -106,31 +106,6 @@ export default {
     margin: 45px 0px;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    .services_card {
-      flex-basis: calc(100% / 3 - 20px);
-      margin: 20px 0;
-      padding: 30px;
-      border-radius: 5px;
-      position: relative;
-      background-color: #fff;
-
-      .f_icon {
-        font-size: 2rem;
-        color: $c2;
-      }
-
-      h3 {
-        margin: 20px 0;
-      }
-
-      .fa-arrow-right {
-        position: absolute;
-        right: 10%;
-        top: 30px;
-        color: $c11;
-      }
-    }
   }
 }
 </style>
