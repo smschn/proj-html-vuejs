@@ -5,7 +5,7 @@
                 Enjoy the low price. We are tracking any itnention of piracy.
             </div>
             <div>
-                &copy; 2020 NEXGEN is Pourdly Powered by <a href="#">Codings</a>.
+                &copy; 2022 NEXGEN is Pourdly Powered by <a href="#">Codings</a>.
             </div>
         </div>
     </section>

@@ -14,110 +14,111 @@
                 </ul>
                 <button class="btn">get in touch</button>
             </div>
-            <div class="card_footer">
-                <h2>About</h2>
+            <div class="card_footer" v-for="(section, index) in footerSections" v-bind:key="index">
+                <h2>{{section.title}}</h2>
                 <ul>
-                    <li v-for="(link, index) in footerLinksAbout" v-bind:key="index"><a v-bind:href="link.url"><i class="fa-solid fa-angle-right"></i> {{link.text}}</a></li>
+                    <li v-for="(link2, index2) in section.links" v-bind:key="index2"><a v-bind:href="link2.url"><i class="fa-solid fa-angle-right"></i> {{link2.text}}</a></li>
                 </ul>
             </div>
-            <div class="card_footer">
-                <h2>Services</h2>
-                <ul>
-                    <li v-for="(link, index) in footerLinksServices" v-bind:key="index"><a v-bind:href="link.url"><i class="fa-solid fa-angle-right"></i> {{link.text}}</a></li>
-                </ul>
-            </div>
-            <div class="card_footer">
-                <h2>Support</h2>
-                <ul>
-                    <li v-for="(link, index) in footerLinksSupport" v-bind:key="index"><a v-bind:href="link.url"><i class="fa-solid fa-angle-right"></i> {{link.text}}</a></li>
-                </ul>
-            </div>                
         </div>
     </section>
 </template>
 
 <script>
+
 export default {
     name: 'MyFooterSection1',
     data() {
         return {
-            footerLinksAbout: [
+            footerSections: [
                 {
-                    text: 'The Company',
-                    url: '#'
+                    title: 'About',
+                    links: [
+                        {
+                            text: 'The Company',
+                            url: '#'
+                        },
+                        {
+                            text: 'Insitutional',
+                            url: '#'
+                        },
+                        {
+                            text: 'Social & Events',
+                            url: '#'
+                        },
+                        {
+                            text: 'Innovation',
+                            url: '#'
+                        },
+                        {
+                            text: 'Environment',
+                            url: '#'
+                        },
+                        {
+                            text: 'Technology',
+                            url: '#'
+                        }
+                    ]
                 },
                 {
-                    text: 'Insitutional',
-                    url: '#'
+                    title: 'Services',
+                    links: [
+                        {
+                            text: 'Audit & Assurance',
+                            url: '#'
+                        },
+                        {
+                            text: 'Financial Advisory',
+                            url: '#'
+                        },
+                        {
+                            text: 'Analytics M&A',
+                            url: '#'
+                        },
+                        {
+                            text: 'Middle Marketing',
+                            url: '#'
+                        },
+                        {
+                            text: 'Legal Consulting',
+                            url: '#'
+                        },
+                        {
+                            text: 'Regulatory Risk',
+                            url: '#'
+                        }
+                    ]
                 },
                 {
-                    text: 'Social & Events',
-                    url: '#'
+                    title: 'Support',
+                    links: [
+                        {
+                            text: 'Responsibility',
+                            url: '#'
+                        },
+                        {
+                            text: 'Terms of Use',
+                            url: '#'
+                        },
+                        {
+                            text: 'About Cookies',
+                            url: '#'
+                        },
+                        {
+                            text: 'Privacy Policy',
+                            url: '#'
+                        },
+                        {
+                            text: 'Accessibility',
+                            url: '#'
+                        },
+                        {
+                            text: 'Information',
+                            url: '#'
+                        }
+                    ]
                 },
-                {
-                    text: 'Innovation',
-                    url: '#'
-                },
-                {
-                    text: 'Environment',
-                    url: '#'
-                },
-                {
-                    text: 'Technology',
-                    url: '#'
-                }
-            ],
-            footerLinksServices: [
-                {
-                    text: 'Audit & Assurance',
-                    url: '#'
-                },
-                {
-                    text: 'Financial Advisory',
-                    url: '#'
-                },
-                {
-                    text: 'Analytics M&A',
-                    url: '#'
-                },
-                {
-                    text: 'Middle Marketing',
-                    url: '#'
-                },
-                {
-                    text: 'Legal Counseling',
-                    url: '#'
-                },
-                {
-                    text: 'Regulatory Risk',
-                    url: '#'
-                }
-            ],
-            footerLinksSupport: [
-                {
-                    text: 'Responsibility',
-                    url: '#'
-                },
-                {
-                    text: 'Terms of Use',
-                    url: '#'
-                },
-                {
-                    text: 'About Cookies',
-                    url: '#'
-                },
-                {
-                    text: 'Privacy policy',
-                    url: '#'
-                },
-                {
-                    text: 'Accessibility',
-                    url: '#'
-                },
-                {
-                    text: 'Information',
-                    url: '#'
-                }
+
             ]
         }
     }
