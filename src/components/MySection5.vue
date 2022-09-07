@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="container s5_bottom d_flex">
-        <MySection5Card v-for="(news, index) in newsData" v-bind:key="index" :newsProps="news"/>
+        <MySection5Card v-for="(news, index) in newsData" v-bind:key="index" :newsProps="news" />
       </div>
     </section>
 </template>

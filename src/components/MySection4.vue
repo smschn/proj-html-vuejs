@@ -8,16 +8,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur molestiae fugiat molestias cupiditate repellat ullam quod exercitationem odio unde.</p>
           </div>
           <div class="employee_container d_flex">
-            <div class="employee_card d_flex" v-for="(employee, index) in employees" v-bind:key="index">
-              <img v-bind:src="employee.imgSrc" v-bind:alt="employee.name">
-              <div class="employee_info">
-                <h4>{{employee.name}}</h4>
-                <h6>{{employee.role}}</h6>
-                <i class="fa-brands fa-facebook-f icon-background"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-              </div>
-            </div>
+            <MySection4Card v-for="(employee, index) in employees" v-bind:key="index" :employeeProps="employee" />
           </div>
         </div>
         <div class="s4_right">
@@ -35,8 +26,13 @@
 </template>
 
 <script>
+import MySection4Card from './MySection4Card.vue';
+
 export default {
     name: 'MySection4',
+    components: {
+      MySection4Card
+    },
     data() {
       return {
         employees: [
@@ -105,39 +101,6 @@ export default {
 
     .employee_container {
       flex-wrap: wrap;
-    }
-
-    .employee_card {
-      margin-top: 30px;
-      flex-basis: calc(100% / 2 - 10px);
-
-      img {
-        width: 80px;
-        border-radius: 5px;
-      }
-
-      .employee_info {
-        padding: 4px 0 4px 20px;
-
-        h6 {
-          margin: 15px 0;
-          color: $c1;
-        }
-
-        i:before {
-          margin: 0 5px;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 20px;
-          vertical-align: middle;
-          padding: 5px;
-          background-color: $c12;
-          display: inline-block;
-          color: $c5;
-        }
-      }
     }
   }
 
