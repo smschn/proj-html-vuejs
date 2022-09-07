@@ -14,10 +14,10 @@
                 </ul>
                 <button class="btn">get in touch</button>
             </div>
-            <div class="card_footer" v-for="(section, index) in footerSections" v-bind:key="index">
-                <h2>{{section.title}}</h2>
+            <div class="card_footer" v-for="(card, index) in footerCards" v-bind:key="index">
+                <h2>{{card.title}}</h2>
                 <ul>
-                    <li v-for="(link2, index2) in section.links" v-bind:key="index2"><a v-bind:href="link2.url"><i class="fa-solid fa-angle-right"></i> {{link2.text}}</a></li>
+                    <li v-for="(link2, index2) in card.links" v-bind:key="index2"><a v-bind:href="link2.url"><i class="fa-solid fa-angle-right"></i> {{link2.text}}</a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@ export default {
     name: 'MyFooterSection1',
     data() {
         return {
-            footerSections: [
+            footerCards: [
                 {
                     title: 'About',
                     links: [

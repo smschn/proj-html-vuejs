@@ -9,17 +9,19 @@
         </div>
       </div>
       <div class="container s5_bottom d_flex">
-        <div class="news_card d_flex" v-for="( news, index) in newsData" v-bind:key="index">
-          <img v-bind:src="news.imgSrc" v-bind:alt="news.alt">
-          <p>{{news.text}}</p>
-        </div>
+        <MySection5Card v-for="(news, index) in newsData" v-bind:key="index" :newsProps="news"/>
       </div>
     </section>
 </template>
 
 <script>
+import MySection5Card from './MySection5Card.vue';
+
 export default {
     name: 'MySection5',
+    components: {
+      MySection5Card
+    },
     data() {
       return {
         newsData: [
@@ -92,30 +94,6 @@ export default {
     justify-content: space-around;
     color: #fff;
     font-weight: bold;
-
-    .news_card {
-      flex-basis: calc(100% / 3 - 5px);
-      max-height: 340px;
-      margin-top: 30px;
-      border-radius: 10px;
-      position: relative;
-      justify-content: center;
-
-
-      img {
-        max-width: 100%;
-        max-height: 100%;
-        filter: brightness(50%);
-        border-radius: 10px;
-      }
-
-      p {
-        position: absolute;
-        bottom: 20%;
-        text-align: center;
-        max-width: 70%;
-      }
-    }
   }
 }
 </style>
