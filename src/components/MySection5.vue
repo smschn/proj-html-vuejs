@@ -77,6 +77,7 @@ export default {
       float: left;
       max-width: 70%;
       color: grey;
+      line-height: 16px;
     }
 
     button {
