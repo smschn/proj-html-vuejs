@@ -6,18 +6,19 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, reprehenderit quasi. Facilis, suscipit dolor voluptatum minima ea fugit exercitationem nam!</p>
       </div>
       <div class="s3_second">
-        <div class="circle_card_container" v-for="(process, index) in processesData" v-bind:key="index">
-          <div class="circle">{{process.number}}</div>
-          <h3>{{process.title}}</h3>
-          <p>{{process.text}}</p>
-        </div>
+        <MySection3Card v-for="(process, index) in processesData" v-bind:key="index" :processProps="process" />
       </div>
     </section>
 </template>
 
 <script>
+import MySection3Card from './MySection3Card.vue';
+
 export default {
     name: 'MySection3',
+    components: {
+      MySection3Card
+    },
     data() {
       return {
         processesData: [
@@ -89,37 +90,6 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
-
-    .circle_card_container {
-      flex-basis: calc(100% / 5);
-      text-align: center;
-      border-top: 4px solid $c4;
-      position: relative;
-      padding: 30px;
-
-      .circle {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: $c4;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -22px;
-        text-align: center;
-        line-height: 40px;
-        color: $c2;
-        font-weight: bold;
-      }
-
-      h3 {
-        margin: 30px 0;
-      }
-
-      p {
-        color: grey;
-      }
-    }
   }
 }
 </style>
