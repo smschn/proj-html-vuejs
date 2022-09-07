@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import MySection1Card from './MyScetion1Card.vue';
+import MySection1Card from './MySection1Card.vue';
 
 export default {
     name: 'MySection1',
