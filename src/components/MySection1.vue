@@ -9,19 +9,20 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quis.</p>
         </div>
         <div class="s1_right d_flex">
-          <div class="square" v-for="(squareContent, index) in squaresContent" v-bind:key="index">
-            <i v-bind:class="squareContent.iconClass"></i>
-            <h2>{{squareContent.title}}</h2>
-            <p>{{squareContent.text}}</p>
-          </div>
+          <MySection1Card v-for="(square, index) in squaresContent" v-bind:key="index" :squareProps="square" />
         </div>
       </div>
     </section>
 </template>
 
 <script>
+import MySection1Card from './MyScetion1Card.vue';
+
 export default {
     name: 'MySection1',
+    components: {
+      MySection1Card
+    },
     data() {
         return {
             squaresContent: [
@@ -93,26 +94,6 @@ export default {
       max-width: 50%;
       margin-left: 15px;
       flex-wrap: wrap;
-
-      .square {
-        flex-basis: calc(100% / 2 - 10px);
-        margin: 5px;
-
-        i {
-          margin-right: 10px;
-          color: $c2;
-          font-size: 1.1rem;
-        }
-
-        h2 {
-          display: inline-block;
-        }
-
-        p {
-          margin: 10px 0;
-          color: grey;
-        }
-      }
     }
   }
 }
