@@ -14,20 +14,19 @@
                 </ul>
                 <button class="btn">get in touch</button>
             </div>
-            <div class="card_footer" v-for="(card, index) in footerCards" v-bind:key="index">
-                <h2>{{card.title}}</h2>
-                <ul>
-                    <li v-for="(link2, index2) in card.links" v-bind:key="index2"><a v-bind:href="link2.url"><i class="fa-solid fa-angle-right"></i> {{link2.text}}</a></li>
-                </ul>
-            </div>
+            <MyFooterSection1Card v-for="(card, index) in footerCards" v-bind:key="index" :cardProps="card" />
         </div>
     </section>
 </template>
 
 <script>
+import MyFooterSection1Card from './MyFooterSection1Card.vue';
 
 export default {
     name: 'MyFooterSection1',
+    components: {
+        MyFooterSection1Card
+    },
     data() {
         return {
             footerCards: [
